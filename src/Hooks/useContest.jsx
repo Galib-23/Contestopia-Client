@@ -4,7 +4,7 @@ const useContest = () => {
     const [contest, setContest] = useState([]);
     const [loading, setLoading] = useState(true);
     useEffect(()=>{
-        fetch('http://localhost:5000/contest')
+        fetch('https://contestopia-server.vercel.app/contest')
         .then(res => res.json())
         .then(data => {
             setContest(data);

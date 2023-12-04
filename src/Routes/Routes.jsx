@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
             {
                 path: 'contestDetails/:id',
                 element: <PrivateRoute><ContestDetails></ContestDetails></PrivateRoute>,
-                loader: ({params}) => fetch(`http://localhost:5000/contest/${params.id}`)
+                loader: ({params}) => fetch(`https://contestopia-server.vercel.app/contest/${params.id}`)
             },
             {
                 path: 'login',
@@ -53,7 +53,7 @@ export const router = createBrowserRouter([
             {
                 path: 'payment/:id',
                 element: <Payment></Payment>,
-                loader: ({params}) => fetch(`http://localhost:5000/contest/${params.id}`)
+                loader: ({params}) => fetch(`https://contestopia-server.vercel.app/contest/${params.id}`)
             }
         ]
     },
@@ -90,7 +90,7 @@ export const router = createBrowserRouter([
             {
                 path: 'updateContest/:id',
                 element: <UpdateContest></UpdateContest>,
-                loader: ({params}) => fetch(`http://localhost:5000/contest/${params.id}`)
+                loader: ({params}) => fetch(`https://contestopia-server.vercel.app/contest/${params.id}`)
             },
             {
                 path: 'manageContest',
