@@ -12,6 +12,9 @@ import PrivateRoute from "./PrivateRoute";
 import Payment from "../Pages/Payment/Payment";
 import Dashboard from "../Layout/Dashboard";
 import MyReg from "../Dash/MyReg/MyReg";
+import AllUsers from "../DashBoard/AllUsers/AllUsers";
+import AddContest from "../CreatorPages/AddContest";
+import MyCreatedContest from "../CreatorPages/MyCreatedContest";
 
 export const router = createBrowserRouter([
     {
@@ -57,6 +60,20 @@ export const router = createBrowserRouter([
             {
                 path: 'myReg',
                 element: <MyReg></MyReg>
+            },
+
+            //------------admin Routes------------
+            {
+                path: 'users',
+                element: <AllUsers></AllUsers>
+            },
+            {
+                path: 'addContest',
+                element: <AddContest></AddContest>
+            },
+            {
+                path: 'myCreatedContest',
+                element: <MyCreatedContest></MyCreatedContest>
             }
         ]
     }

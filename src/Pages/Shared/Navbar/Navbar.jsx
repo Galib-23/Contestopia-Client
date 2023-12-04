@@ -4,9 +4,13 @@ import { useContext } from 'react';
 import { AuthContext } from '../../../Providers/AuthProvider';
 import { FaUser } from "react-icons/fa";
 import Swal from 'sweetalert2';
+import useAdmin from '../../../Hooks/useAdmin';
+import useCreator from '../../../Hooks/useCreator';
 
 const Navbar = () => {
 
+    const [isAdmin] = useAdmin();
+    const [isCreator] = useCreator();
     const { user, logOut } = useContext(AuthContext);
 
     const handleLogOut = () => {
@@ -64,7 +68,14 @@ const Navbar = () => {
                                     <p>{user?.displayName}</p>
                                 </li>
                                 <li>
-                                    <Link to='/dashboard/myReg'><p>Dashboard</p></Link>
+                                    {
+                                        isAdmin ? (
+                                            <Link to='/dashboard/users'><p>Dashboard</p></Link>
+                                        ) : isCreator ? (
+                                            <Link to='/dashboard/myCreatedContest'><p>Dashboard</p></Link>
+                                        ) : 
+                                        <Link to='/dashboard/myReg'><p>Dashboard</p></Link>
+                                    }
                                 </li>
                                 <li>
                                     <button onClick={handleLogOut} className="btn h-fit w-fit btn-ghost text-red-600">Logout</button>
