@@ -10,6 +10,8 @@ import SignUp from "../Pages/SignUp/SignUp";
 import Blank from "../Blank/Blank";
 import PrivateRoute from "./PrivateRoute";
 import Payment from "../Pages/Payment/Payment";
+import Dashboard from "../Layout/Dashboard";
+import MyReg from "../Dash/MyReg/MyReg";
 
 export const router = createBrowserRouter([
     {
@@ -48,4 +50,14 @@ export const router = createBrowserRouter([
             }
         ]
     },
+    {
+        path: 'dashboard',
+        element: <PrivateRoute><Dashboard></Dashboard></PrivateRoute>,
+        children: [
+            {
+                path: 'myReg',
+                element: <MyReg></MyReg>
+            }
+        ]
+    }
 ]);

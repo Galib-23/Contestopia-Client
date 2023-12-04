@@ -2,10 +2,11 @@ import { useContext } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import SocialLogin from "../../Components/SocialLogin";
 
 const Login = () => {
 
-    const {signIn} = useContext(AuthContext);
+    const { signIn } = useContext(AuthContext);
     const navigate = useNavigate();
     const location = useLocation();
     const from = location.state?.from?.pathname || '/';
@@ -16,16 +17,16 @@ const Login = () => {
         const email = form.email.value;
         const password = form.password.value;
         signIn(email, password)
-        .then(res => {
-            const user = res.user;
-            console.log(user);
-            navigate(from, { replace: true});
-            Swal.fire({
-                title: "Login Successful!",
-                text: "You are now successfully logged in!",
-                icon: "success"
-              });
-        })
+            .then(res => {
+                const user = res.user;
+                console.log(user);
+                navigate(from, { replace: true });
+                Swal.fire({
+                    title: "Login Successful!",
+                    text: "You are now successfully logged in!",
+                    icon: "success"
+                });
+            })
 
     }
     return (
@@ -55,10 +56,11 @@ const Login = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary text-white" type="submit" value="Login" />
                         </div>
-                        <div className="text-center mt-4">
-                            <p>Do not have an account ? <Link className="text-blue-700 font-bold ml-2" to='/signUp'>Register</Link></p>
-                        </div>
                     </form>
+                    <SocialLogin></SocialLogin>
+                    <div className="text-center mt-4 mb-6">
+                        <p>Do not have an account ? <Link className="text-blue-700 font-bold ml-2" to='/signUp'>Register</Link></p>
+                    </div>
                 </div>
             </div>
         </div>

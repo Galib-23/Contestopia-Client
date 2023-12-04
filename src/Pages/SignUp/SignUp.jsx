@@ -3,10 +3,13 @@ import { useForm } from "react-hook-form";
 import { Link, useNavigate } from "react-router-dom";
 import { AuthContext } from "../../Providers/AuthProvider";
 import Swal from "sweetalert2";
+import useAxiosPublic from "../../Hooks/useAxiosPublic";
+import SocialLogin from "../../Components/SocialLogin";
 
 
 
 const SignUp = () => {
+    const axiosPublic = useAxiosPublic();
 
     const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
@@ -25,13 +28,23 @@ const SignUp = () => {
                 console.log(loggedUser);
                 updateUserProfile(data.name, data.photo)
                     .then(() => {
-                        reset();
-                        navigate('/');
-                        Swal.fire({
-                            title: "Sign Up Successful!",
-                            text: "You are now successfully registered!",
-                            icon: "success"
-                        });
+                        //send user data to database
+                        const userInfo = {
+                            name: data.name,
+                            email: data.email
+                        }
+                        axiosPublic.post('/users', userInfo)
+                            .then(res => {
+                                if (res.data.insertedId) {
+                                    reset();
+                                    navigate('/');
+                                    Swal.fire({
+                                        title: "Sign Up Successful!",
+                                        text: "You are now successfully registered!",
+                                        icon: "success"
+                                    });
+                                }
+                            })
                     }).catch(error => {
                         console.log(error);
                     })
@@ -77,10 +90,11 @@ const SignUp = () => {
                         <div className="form-control mt-6">
                             <input className="btn btn-primary text-white" type="submit" value="Sign Up" />
                         </div>
-                        <div className="text-center mt-4">
-                            <p>Already have an account ? <Link className="text-blue-700 font-bold ml-2" to='/login'>Login</Link></p>
-                        </div>
                     </form>
+                    <SocialLogin></SocialLogin>
+                    <div className="text-center mt-4 mb-5">
+                        <p>Already have an account ? <Link className="text-blue-700 font-bold ml-2" to='/login'>Login</Link></p>
+                    </div>
                 </div>
             </div>
         </div>
