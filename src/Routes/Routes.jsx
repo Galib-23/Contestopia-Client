@@ -15,6 +15,7 @@ import MyReg from "../Dash/MyReg/MyReg";
 import AllUsers from "../DashBoard/AllUsers/AllUsers";
 import AddContest from "../CreatorPages/AddContest";
 import MyCreatedContest from "../CreatorPages/MyCreatedContest";
+import UpdateContest from "../CreatorPages/UpdateContest";
 
 export const router = createBrowserRouter([
     {
@@ -74,6 +75,11 @@ export const router = createBrowserRouter([
             {
                 path: 'myCreatedContest',
                 element: <MyCreatedContest></MyCreatedContest>
+            },
+            {
+                path: 'updateContest/:id',
+                element: <UpdateContest></UpdateContest>,
+                loader: ({params}) => fetch(`http://localhost:5000/contest/${params.id}`)
             }
         ]
     }
