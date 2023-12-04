@@ -8,6 +8,7 @@ import ContestDetails from "../Components/ContestDetails";
 import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Blank from "../Blank/Blank";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
     {
@@ -24,7 +25,7 @@ export const router = createBrowserRouter([
             },
             {
                 path: 'contestDetails/:id',
-                element: <ContestDetails></ContestDetails>,
+                element: <PrivateRoute><ContestDetails></ContestDetails></PrivateRoute>,
                 loader: ({params}) => fetch(`http://localhost:5000/contest/${params.id}`)
             },
             {
