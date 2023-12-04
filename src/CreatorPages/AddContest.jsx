@@ -21,7 +21,8 @@ const AddContest = () => {
             tag: data.tag,
             deadline: data.deadline,
             created_by: user?.email,
-            reg_count: 0
+            reg_count: 0,
+            status: 'pending'
         }
         const contestRes = await axiosSecure.post('/contest',contest);
         if (contestRes.data.insertedId) {

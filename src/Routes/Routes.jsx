@@ -16,6 +16,9 @@ import AllUsers from "../DashBoard/AllUsers/AllUsers";
 import AddContest from "../CreatorPages/AddContest";
 import MyCreatedContest from "../CreatorPages/MyCreatedContest";
 import UpdateContest from "../CreatorPages/UpdateContest";
+import ManageContest from "../DashBoard/ManageContest/ManageContest";
+import MyProfile from "../Dash/MyProfile/MyProfile";
+import MyWinning from "../Dash/MyWinning/MyWinning";
 
 export const router = createBrowserRouter([
     {
@@ -62,6 +65,14 @@ export const router = createBrowserRouter([
                 path: 'myReg',
                 element: <MyReg></MyReg>
             },
+            {
+                path: 'myProfile',
+                element: <MyProfile></MyProfile>
+            },
+            {
+                path: 'win',
+                element: <MyWinning></MyWinning>
+            },
 
             //------------admin Routes------------
             {
@@ -80,6 +91,10 @@ export const router = createBrowserRouter([
                 path: 'updateContest/:id',
                 element: <UpdateContest></UpdateContest>,
                 loader: ({params}) => fetch(`http://localhost:5000/contest/${params.id}`)
+            },
+            {
+                path: 'manageContest',
+                element: <ManageContest></ManageContest>
             }
         ]
     }

@@ -19,7 +19,7 @@ const Dashboard = () => {
                             <li><NavLink to='/dashboard/users'>
                                 <FaUsers></FaUsers> Manage Users</NavLink>
                             </li>
-                            <li><NavLink to='/dashboard/myReg'>
+                            <li><NavLink to='/dashboard/manageContest'>
                                 <FaList></FaList>Manage Contests</NavLink>
                             </li>
                         </>)
@@ -32,7 +32,7 @@ const Dashboard = () => {
                                 </li>
                             </>) : 
                             <>
-                            <li><NavLink to='/dashboard/profile'>
+                            <li><NavLink to='/dashboard/myProfile'>
                                 <FaUser></FaUser> My Profile</NavLink>
                             </li>
                             <li><NavLink to='/dashboard/myReg'>
