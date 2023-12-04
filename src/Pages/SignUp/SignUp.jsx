@@ -8,27 +8,34 @@ import Swal from "sweetalert2";
 
 const SignUp = () => {
 
-    const {createUser} = useContext(AuthContext);
+    const { createUser, updateUserProfile } = useContext(AuthContext);
     const navigate = useNavigate();
 
     const {
         register,
-        handleSubmit
+        handleSubmit,
+        reset
     } = useForm()
 
     const onSubmit = (data) => {
         console.log(data);
         createUser(data.email, data.password)
-        .then(result => {
-            const loggedUser = result.user;
-            console.log(loggedUser);
-            navigate('/');
-            Swal.fire({
-                title: "Sign Up Successful!",
-                text: "You are now successfully registered!",
-                icon: "success"
-              });
-        })
+            .then(result => {
+                const loggedUser = result.user;
+                console.log(loggedUser);
+                updateUserProfile(data.name, data.photo)
+                    .then(() => {
+                        reset();
+                        navigate('/');
+                        Swal.fire({
+                            title: "Sign Up Successful!",
+                            text: "You are now successfully registered!",
+                            icon: "success"
+                        });
+                    }).catch(error => {
+                        console.log(error);
+                    })
+            })
     }
 
     return (
