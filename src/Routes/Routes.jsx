@@ -9,6 +9,7 @@ import Login from "../Pages/Login/Login";
 import SignUp from "../Pages/SignUp/SignUp";
 import Blank from "../Blank/Blank";
 import PrivateRoute from "./PrivateRoute";
+import Payment from "../Pages/Payment/Payment";
 
 export const router = createBrowserRouter([
     {
@@ -39,6 +40,11 @@ export const router = createBrowserRouter([
             {
                 path: 'blank',
                 element: <Blank></Blank>
+            },
+            {
+                path: 'payment/:id',
+                element: <Payment></Payment>,
+                loader: ({params}) => fetch(`http://localhost:5000/contest/${params.id}`)
             }
         ]
     },

@@ -1,4 +1,4 @@
-import { useLoaderData } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 
 
 const ContestDetails = () => {
@@ -12,7 +12,9 @@ const ContestDetails = () => {
             <p>{description}</p>
             <p className="text-yellow-600 mt-2">Prize: {prizemoney}</p>
             <p className="font-semibold mt-1">Deadline: {deadline}</p>
-            <button className="mt-6 btn btn-outline btn-secondary">Register Now</button>
+            <Link to={`/payment/${_id}`}>
+                <button className="mt-6 btn btn-outline btn-secondary">Register Now</button>
+            </Link>
         </div>
     );
 };
