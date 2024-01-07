@@ -6,7 +6,7 @@ import Winner from "../Winner/Winner";
 
 const HomePage = () => {
     return (
-        <div>
+        <div className="lg:mx-16">
             <Banner></Banner>
             <PopularContest></PopularContest>
             <BestContentCreator></BestContentCreator>
