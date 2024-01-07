@@ -1,7 +1,6 @@
 import { useState } from 'react';
-import banner from '../../../assets/banner.jpg';
 import { useNavigate } from 'react-router-dom';
-
+import banner from '../../../assets/banner.jpg';
 const Banner = () => {
     const [searchInput, setSearchInput] = useState('');
     const navigate = useNavigate();
@@ -18,21 +17,23 @@ const Banner = () => {
         
     }
     return (
-        <div className="hero min-h-screen" style={{ backgroundImage: `url(${banner})` }}>
-            <div className="hero-overlay bg-opacity-60"></div>
+        <div className="hero min-h-screen ">
+            <div className="hero-overlay bg-white"></div>
             <div className="hero-content text-center text-neutral-content">
                 <div className="">
-                    <h1 className="mb-5 text-5xl font-bold">Welcome To Contestopia</h1>
-                    <p className="mb-5">Where Dreams Compete! Unleash your talents, showcase your skills, and embrace the spirit of competition. Join us in a world where contests come alive, offering a platform to shine, excel, and triumph.</p>
+                    <div className='flex justify-center'>
+                    <img className='w-2/3' src={banner} alt="" />
+                    </div>
+                    <p className="mb-5 text-black">Where Dreams Compete! Unleash your talents, showcase your skills, and embrace the spirit of <br /> competition. Join us in a world where contests come alive, offering <br /> a platform to shine, excel, and triumph.</p>
                     <div className="join">
                         <input className="w-72 text-black input input-bordered join-item" placeholder="Search Contests(use tags)"
                          name='search'
                          value={searchInput}
                             onChange={e => setSearchInput(e.target.value)}
                          />
-                        <button onClick={handleSearch} className="btn btn-secondary bg-yellow-600 border-none join-item">Search</button>
+                        <button onClick={handleSearch} className="btn btn-secondary bg-cyan-600 border-none join-item">Search</button>
                     </div>
-                    <p className='text-center'><span className='font-bold text-yellow-200'>Suggested tags:</span> gaming, article, medical, business</p>
+                    <p className='text-center mt-3'><span className='font-bold text-black'>Suggested tags:</span> <span className='text-gray-600'>gaming, article, medical, business</span></p>
                 </div>
             </div>
         </div>

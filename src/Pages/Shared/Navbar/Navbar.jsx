@@ -29,23 +29,23 @@ const Navbar = () => {
     </>
 
     return (
-        <div className="navbar bg-gradient-to-b from-emerald-500 to-blue-950">
+        <div className="navbar bg-slate-400 bg-opacity-40">
             <div className="navbar-start">
                 <div className="dropdown">
                     <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
                         <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /></svg>
                     </div>
-                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-yellow-400">
+                    <ul tabIndex={0} className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52 text-black font-semibold">
                         {navLinks}
                     </ul>
                 </div>
                 <div className='flex items-center'>
-                    <p className="hidden lg:flex btn btn-ghost uppercase font-bold text-yellow-500 text-2xl">Contestopia</p>
+                    <p className="hidden lg:flex btn btn-ghost uppercase font-bold text-cyan-600 text-2xl">Contestopia</p>
                     <img className='w-10' src={logo} alt="" />
                 </div>
             </div>
             <div className="navbar-center hidden lg:flex">
-                <ul className="menu text-yellow-400 menu-horizontal px-1">
+                <ul className="menu text-black menu-horizontal px-1 font-semibold space-x-2">
                     {navLinks}
                 </ul>
             </div>
@@ -83,7 +83,7 @@ const Navbar = () => {
                             </ul>
                         </div>
                         :
-                        <Link to='/login'><button className="btn btn-ghost text-yellow-500">Login</button></Link>
+                        <Link to='/login'><button className="btn btn-ghost text-yellow-400">Login</button></Link>
                 }
             </div>
         </div>
