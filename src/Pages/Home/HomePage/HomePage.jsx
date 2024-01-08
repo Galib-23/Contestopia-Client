@@ -3,6 +3,7 @@ import Ad from "../Ad/Ad";
 import Banner from "../Banner/Banner";
 import BestContentCreator from "../BestContentCreator.jsx/BestContentCreator";
 import PopularContest from "../PopularContest/PopularContest";
+import Statistics from "../Statistics/Statistics";
 import Winner from "../Winner/Winner";
 
 const HomePage = () => {
@@ -11,8 +12,9 @@ const HomePage = () => {
             <Banner></Banner>
             <PopularContest></PopularContest>
             <BestContentCreator></BestContentCreator>
-            <Winner></Winner>
             <Ad></Ad>
+            <Winner></Winner>
+            <Statistics></Statistics>
             <Footer></Footer>
         </div>
     );
