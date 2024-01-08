@@ -4,6 +4,7 @@ import { Carousel } from 'react-responsive-carousel';
 import gamingCreator from '../../../assets/gaming.png';
 import medicalCreator from '../../../assets/medical.png';
 import businessCreator from '../../../assets/business.png';
+import articleCreator from '../../../assets/article.png';
 
 
 const BestContentCreator = () => {
@@ -12,7 +13,7 @@ const BestContentCreator = () => {
     // const topT = sortedContest.slice(0, 3);
     return (
         <div>
-            <h2 className="text-4xl font-extrabold text-center mt-16 mb-8">Top Contest Creators</h2>
+            <h2 className="text-5xl text-cyan-400 font-bold text-center mt-44 mb-16">Top Contest Creators</h2>
             <Carousel className="text-center min-h-screen">
                 <div>
                     <img src={gamingCreator} />
@@ -22,6 +23,9 @@ const BestContentCreator = () => {
                 </div>
                 <div>
                     <img src={businessCreator} />
+                </div>
+                <div>
+                    <img src={articleCreator} />
                 </div>
             </Carousel>
         </div>
