@@ -51,8 +51,8 @@ const Statistics = () => {
                 <div className="px-6 py-14 bg-cyan-400 rounded-xl flex items-center justify-evenly">
                     <h2 className="text-5xl"><FaTrophy /></h2>
                     <div>
-                        <h2 className="text-5xl text-center font-bold">{totalPrize}+</h2>
-                        <p className="text-lg text-center font-semibold">USD Prize distributed</p>
+                        <h2 className="text-5xl text-center font-bold">${totalPrize}</h2>
+                        <p className="text-lg text-center font-semibold">Prize distributed</p>
                     </div>
                 </div>
                 <div className="px-6 py-14 bg-yellow-400 rounded-xl flex items-center justify-evenly">

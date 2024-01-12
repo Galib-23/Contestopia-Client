@@ -1,4 +1,5 @@
 import Footer from "../../Shared/Footer/Footer";
+import Accordian from "../Accordian/Accordian";
 import Ad from "../Ad/Ad";
 import Banner from "../Banner/Banner";
 import BestContentCreator from "../BestContentCreator.jsx/BestContentCreator";
@@ -15,6 +16,7 @@ const HomePage = () => {
             <Ad></Ad>
             <Winner></Winner>
             <Statistics></Statistics>
+            <Accordian></Accordian>
             <Footer></Footer>
         </div>
     );
