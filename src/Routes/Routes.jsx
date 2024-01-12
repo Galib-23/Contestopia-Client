@@ -19,6 +19,7 @@ import UpdateContest from "../CreatorPages/UpdateContest";
 import ManageContest from "../DashBoard/ManageContest/ManageContest";
 import MyProfile from "../Dash/MyProfile/MyProfile";
 import MyWinning from "../Dash/MyWinning/MyWinning";
+import Contact from "../Pages/Contact/Contact";
 
 export const router = createBrowserRouter([
     {
@@ -54,6 +55,10 @@ export const router = createBrowserRouter([
                 path: 'payment/:id',
                 element: <Payment></Payment>,
                 loader: ({params}) => fetch(`https://contestopia-server.vercel.app/contest/${params.id}`)
+            },
+            {
+                path: '/contact',
+                element: <Contact></Contact>
             }
         ]
     },
