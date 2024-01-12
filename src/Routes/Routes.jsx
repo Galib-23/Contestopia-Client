@@ -20,6 +20,7 @@ import ManageContest from "../DashBoard/ManageContest/ManageContest";
 import MyProfile from "../Dash/MyProfile/MyProfile";
 import MyWinning from "../Dash/MyWinning/MyWinning";
 import Contact from "../Pages/Contact/Contact";
+import Pricing from "../Pages/Pricing/Pricing";
 
 export const router = createBrowserRouter([
     {
@@ -59,6 +60,10 @@ export const router = createBrowserRouter([
             {
                 path: '/contact',
                 element: <Contact></Contact>
+            },
+            {
+                path: '/pricing',
+                element: <Pricing></Pricing>
             }
         ]
     },
