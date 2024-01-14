@@ -4,7 +4,7 @@ const Winner = () => {
     return (
         <div className="hero min-h-screen">
             <div className="hero-content flex-col gap-12 lg:flex-row">
-                <img src={winner} className="w-[750px] h-[450px] rounded-2xl shadow-2xl" />
+                <img src={winner} className="w-96 md:w-[750px] md:h-[450px] rounded-2xl shadow-2xl" />
                 <div>
                     <h1 className="text-5xl font-bold text-cyan-400">Winner Of The Week!</h1>
                     <p className="py-6 text-2xl font-semibold">Md. Abdul Latif</p>

@@ -15,12 +15,12 @@ const Navbar = () => {
 
     const handleLogOut = () => {
         logOut()
-        .then(() => {
-            Swal.fire({
-                title: "Logged Out!",
-                icon: "success"
-              });
-        })
+            .then(() => {
+                Swal.fire({
+                    title: "Logged Out!",
+                    icon: "success"
+                });
+            })
     }
 
     const navLinks = <>
@@ -42,7 +42,9 @@ const Navbar = () => {
                     </ul>
                 </div>
                 <div className='flex items-center'>
-                    <p className="hidden lg:flex btn btn-ghost uppercase font-bold text-cyan-600 text-2xl">Contestopia</p>
+                    <Link to='/'>
+                        <p className="hidden lg:flex btn btn-ghost uppercase font-bold text-cyan-600 text-2xl">Contestopia</p>
+                    </Link>
                     <img className='w-10' src={logo} alt="" />
                 </div>
             </div>
@@ -54,36 +56,36 @@ const Navbar = () => {
             <div className="navbar-end">
                 {
                     user ?
-
-                        <div className="dropdown dropdown-end">
-                            <div tabIndex={0} role="button" className="btn btn-ghost">
-                                <div className="avatar placeholder">
-                                    <div className="bg-neutral text-neutral-content rounded-full w-8">
-                                        <span className="text-xs">
-                                            <FaUser></FaUser>
-                                        </span>
+                        <div className='flex items-center'>
+                            <p>{user?.displayName}</p>
+                            <div className="dropdown dropdown-end">
+                                <div tabIndex={0} role="button" className="btn btn-ghost">
+                                    <div className="avatar placeholder">
+                                        <div className="bg-neutral text-neutral-content rounded-full w-8">
+                                            <span className="text-xs">
+                                                <FaUser></FaUser>
+                                            </span>
+                                        </div>
                                     </div>
                                 </div>
+                                <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box">
+                                    <li>
+                                        {
+                                            isAdmin ? (
+                                                <Link to='/dashboard/users'><p>Dashboard</p></Link>
+                                            ) : isCreator ? (
+                                                <Link to='/dashboard/myCreatedContest'><p>Dashboard</p></Link>
+                                            ) :
+                                                <Link to='/dashboard/myReg'><p>Dashboard</p></Link>
+                                        }
+                                    </li>
+                                    <li>
+                                        <button onClick={handleLogOut} className="btn h-fit w-fit btn-ghost text-red-600">Logout</button>
+                                    </li>
+                                </ul>
                             </div>
-                            <ul tabIndex={0} className="menu menu-md dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box">
-                                <li>
-                                    <p>{user?.displayName}</p>
-                                </li>
-                                <li>
-                                    {
-                                        isAdmin ? (
-                                            <Link to='/dashboard/users'><p>Dashboard</p></Link>
-                                        ) : isCreator ? (
-                                            <Link to='/dashboard/myCreatedContest'><p>Dashboard</p></Link>
-                                        ) : 
-                                        <Link to='/dashboard/myReg'><p>Dashboard</p></Link>
-                                    }
-                                </li>
-                                <li>
-                                    <button onClick={handleLogOut} className="btn h-fit w-fit btn-ghost text-red-600">Logout</button>
-                                </li>
-                            </ul>
                         </div>
+
                         :
                         <Link to='/login'><button className="btn btn-ghost btn-sm btn-outline text-cyan-600">Login</button></Link>
                 }

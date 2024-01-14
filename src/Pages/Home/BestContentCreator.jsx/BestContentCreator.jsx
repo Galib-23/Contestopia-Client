@@ -12,9 +12,9 @@ const BestContentCreator = () => {
     // const sortedContest = contest.sort((a, b) => b.reg_count - a.reg_count);
     // const topT = sortedContest.slice(0, 3);
     return (
-        <div>
+        <div className="mx-2 md:mx-28">
             <h2 className="text-5xl text-cyan-400 font-bold text-center mt-44 mb-16">Top Contest Creators</h2>
-            <Carousel className="text-center min-h-screen">
+            <Carousel className="text-center">
                 <div>
                     <img src={gamingCreator} />
                 </div>
