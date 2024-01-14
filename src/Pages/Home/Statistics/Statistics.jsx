@@ -26,7 +26,7 @@ const Statistics = () => {
     }, []);
     return (
         <div className="md:mt-24 mx-3">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-black">
                 <div className="px-6 py-14 bg-red-400 rounded-xl flex items-center justify-evenly">
                     <h2 className="text-5xl"><FaUsers /></h2>
                     <div>

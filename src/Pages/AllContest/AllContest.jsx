@@ -21,7 +21,7 @@ const AllContest = () => {
     const gaming = contest.filter(con => con.tag === 'gaming');
     const medical = contest.filter(con => con.tag === 'medical');
     return (
-        <div>
+        <div className='bg-white'>
             <Tabs defaultIndex={tabIndex} onSelect={(index) => setTabIndex(index)}>
                 <TabList>
                     <Tab>Business Contests</Tab>

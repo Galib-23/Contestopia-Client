@@ -9,7 +9,7 @@ import Winner from "../Winner/Winner";
 
 const HomePage = () => {
     return (
-        <div className="lg:mx-16 overflow-x-hidden">
+        <div className="lg:mx-16 bg-white overflow-x-hidden">
             <Banner></Banner>
             <PopularContest></PopularContest>
             <BestContentCreator></BestContentCreator>

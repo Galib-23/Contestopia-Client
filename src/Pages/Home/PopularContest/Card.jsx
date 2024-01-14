@@ -5,7 +5,7 @@ import { HiOutlineExclamationCircle } from "react-icons/hi2";
 const Card = ({top}) => {
     const { _id, contest_name, image, reg_count, description } = top;
     return (
-        <div className="card bg-base-100 shadow-xl">
+        <div className="card bg-white shadow-xl">
             <figure className="p-5"><img className="w-full h-60 rounded-lg" src={image} alt="Shoes" /></figure>
             <div className="card-body">
                 <h2 className="card-title text-cyan-600">{contest_name}</h2>

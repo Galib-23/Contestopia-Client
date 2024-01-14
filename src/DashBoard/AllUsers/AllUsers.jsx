@@ -90,7 +90,7 @@ const AllUsers = () => {
                                         <div tabIndex={0} role="button" className="btn m-1">
                                             <FaUserSecret className="text-xl"></FaUserSecret>
                                         </div>
-                                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-base-100 rounded-box w-52 space-y-2">
+                                        <ul tabIndex={0} className="dropdown-content z-[1] menu p-2 shadow bg-white rounded-box w-52 space-y-2">
                                             <li>
                                                 <button onClick={() => handleMakeAdmin(user)} className="btn btn-sm">Make Admin</button>
                                             </li>

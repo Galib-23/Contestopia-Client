@@ -15,7 +15,7 @@ const Contact = () => {
             });
     };
     return (
-        <div>
+        <div className='bg-white'>
             <div className='mt-28' id='contact'>
                 <div className='flex flex-col-reverse mx-3 md:flex-row-reverse items-center justify-evenly'>
                     <div className='w-full md:w-1/3 mx-8'>
