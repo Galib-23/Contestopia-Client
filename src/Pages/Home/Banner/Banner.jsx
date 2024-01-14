@@ -26,7 +26,7 @@ const Banner = () => {
                     </div>
                     <p className="mb-5 text-black">Where Dreams Compete! Unleash your talents, showcase your skills, and embrace the spirit of <br /> competition. Join us in a world where contests come alive, offering <br /> a platform to shine, excel, and triumph.</p>
                     <div className="join">
-                        <input className="w-72 text-black input input-bordered join-item" placeholder="Search Contests(use tags)"
+                        <input className="md:w-72 text-black input input-bordered join-item" placeholder="Search Contests(use tags)"
                          name='search'
                          value={searchInput}
                             onChange={e => setSearchInput(e.target.value)}

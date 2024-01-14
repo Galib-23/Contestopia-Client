@@ -29,29 +29,29 @@ const AllContest = () => {
                     <Tab>Gaming Contests</Tab>
                     <Tab>Medical Contests</Tab>
                 </TabList>
-                <TabPanel className={"mx-1 md:mx-16"}>
-                    <div className='grid grid-cols-1 md:grid-cols-3 p-10 gap-10'>
+                <TabPanel className={"mx-2 md:mx-16"}>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                         {
                             business?.map(con => <ContestCard key={con._id} con={con}></ContestCard>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel className={"mx-1 md:mx-16"}>
-                    <div className='grid grid-cols-1 md:grid-cols-3 p-10 gap-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                         {
                             article?.map(con => <ContestCard key={con._id} con={con}></ContestCard>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel className={"mx-1 md:mx-16"}>
-                    <div className='grid grid-cols-1 md:grid-cols-3 p-10 gap-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                         {
                             gaming?.map(con => <ContestCard key={con._id} con={con}></ContestCard>)
                         }
                     </div>
                 </TabPanel>
                 <TabPanel className={"mx-1 md:mx-16"}>
-                    <div className='grid grid-cols-1 md:grid-cols-3 p-10 gap-10'>
+                    <div className='grid grid-cols-1 md:grid-cols-3 gap-10'>
                         {
                             medical?.map(con => <ContestCard key={con._id} con={con}></ContestCard>)
                         }
