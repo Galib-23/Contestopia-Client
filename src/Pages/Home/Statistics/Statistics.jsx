@@ -17,7 +17,7 @@ const Statistics = () => {
         totalParticipant = totalParticipant + (contest[i]?.reg_count);
     }
     useEffect(() => {
-        fetch('http://localhost:5000/totalUsers')
+        fetch('https://contestopia-server.vercel.app/totalUsers')
             .then(res => res.json())
             .then(data => setTotalUsers(data))
             .catch(err => {

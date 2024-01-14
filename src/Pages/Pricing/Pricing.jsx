@@ -16,9 +16,9 @@ const Pricing = () => {
                                 <p className='text-lg text-gray-500'>Complete Access to all appps</p>
                                 <div className='grid grid-cols-2 gap-2'>
                                     <button className="btn btn-outline text-green-500"><FaTrophy />Competetions</button>
-                                    <button className="btn btn-outline text-red-500"><FaMedal/>Rewards</button>
-                                    <button className="btn btn-outline text-blue-500"><FiGrid/>Gallery</button>
-                                    <button className="btn btn-outline text-yellow-500"><FaCamera/>Captures</button>
+                                    <button className="btn btn-outline text-red-500"><FaMedal />Rewards</button>
+                                    <button className="btn btn-outline text-blue-500"><FiGrid />Gallery</button>
+                                    <button className="btn btn-outline text-yellow-500"><FaCamera />Captures</button>
                                 </div>
                             </div>
                             <div className='space-y-3'>
@@ -29,9 +29,43 @@ const Pricing = () => {
                     </div>
                 </div>
             </div>
-            <div>
+            <div className='mb-20'>
                 <h2 className='text-4xl font-bold text-cyan-500 mt-10 text-center mb-3'>Or Buy Each App Inidvidually</h2>
                 <p className='text-xl font-semibold text-gray-500 text-center mb-14'>Only pay for what you need, no lock-in contracts, downgrade whenever.</p>
+                <div className='mx-2 md:mx-32 space-y-7'>
+                    <div className='flex items-center justify-between bg-base-200 rounded-2xl shadow-lg p-10'>
+                        <div className='space-y-3'>
+                            <h2 className='text-3xl font-bold flex items-center text-green-500'><FaTrophy />Competetions</h2>
+                            <p>Easily set up and run giveaways, contests & sweepstakes that drive real user engagement.</p>
+                            <button className="btn text-cyan-400 btn-outline btn-sm">View Pricing</button>
+                        </div>
+                        <h2 className='text-4xl font-bold'>$10/month</h2>
+                    </div>
+                    <div className='flex items-center justify-between bg-base-200 rounded-2xl shadow-lg p-10'>
+                        <div className='space-y-3'>
+                            <h2 className='text-3xl font-bold flex items-center text-red-500'><FaMedal />Rewards</h2>
+                            <p>Create unlockable rewards using millions of action combinations in minutes.</p>
+                            <button className="btn text-cyan-400 btn-outline btn-sm">View Pricing</button>
+                        </div>
+                        <h2 className='text-4xl font-bold'>$10/month</h2>
+                    </div>
+                    <div className='flex items-center justify-between bg-base-200 rounded-2xl shadow-lg p-10'>
+                        <div className='space-y-3'>
+                            <h2 className='text-3xl font-bold flex items-center text-blue-500'><FiGrid />Gallery</h2>
+                            <p>Collect, curate & display the content that matters to your business.</p>
+                            <button className="btn text-cyan-400 btn-outline btn-sm">View Pricing</button>
+                        </div>
+                        <h2 className='text-4xl font-bold'>$10/month</h2>
+                    </div>
+                    <div className='flex items-center justify-between bg-base-200 rounded-2xl shadow-lg p-10'>
+                        <div className='space-y-3'>
+                            <h2 className='text-3xl font-bold flex items-center text-yellow-500'><FaCamera />Captures</h2>
+                            <p>Target beautiful messages or opt-in forms to right users at the right time to build your email list & grow your business.</p>
+                            <button className="btn text-cyan-400 btn-outline btn-sm">View Pricing</button>
+                        </div>
+                        <h2 className='text-4xl font-bold'>$10/month</h2>
+                    </div>
+                </div>
             </div>
         </div>
     );
