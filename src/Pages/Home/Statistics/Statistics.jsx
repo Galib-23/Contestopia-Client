@@ -10,12 +10,12 @@ const Statistics = () => {
     const [contest] = useContest();
     const totalContest = contest?.length;
     const [totalUsers, setTotalUsers] = useState([]);
-    let totalPrize = 0;
+    // let totalPrize = 0;
     let totalParticipant = 0;
-    for (let i = 0; i < contest?.length; i++) {
-        totalPrize = totalPrize + (contest[i]?.prizemoney);
-        totalParticipant = totalParticipant + (contest[i]?.reg_count);
-    }
+    // for (let i = 0; i < contest?.length; i++) {
+    //     totalPrize = totalPrize + (contest[i]?.prizemoney);
+    //     totalParticipant = totalParticipant + (contest[i]?.reg_count);
+    // }
     useEffect(() => {
         fetch('https://contestopia-server.vercel.app/totalUsers')
             .then(res => res.json())
@@ -51,7 +51,7 @@ const Statistics = () => {
                 <div className="px-6 py-14 bg-cyan-400 rounded-xl flex items-center justify-evenly">
                     <h2 className="text-5xl"><FaTrophy /></h2>
                     <div>
-                        <h2 className="text-5xl text-center font-bold">${totalPrize}</h2>
+                        <h2 className="text-5xl text-center font-bold">$2500990</h2>
                         <p className="text-lg text-center font-semibold">Prize distributed</p>
                     </div>
                 </div>
